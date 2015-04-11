@@ -10,9 +10,7 @@
       el = document.createElement('div');
       el.setAttribute('data-thread-key', $(this).attr('key'));
       el.setAttribute('data-url', $(this).attr('url'));
-      el.setAttribute('data-author-key', $(this).attr('duoshuo'));
-      DUOSHUO.EmbedThread(el);
-      return comments.append(el).hide().fadeIn('');
+      return el.setAttribute('data-author-key', $(this).attr('duoshuo'));
     }).on('click', '.extra-switch', function() {
       return $('.extra').toggle('fast');
     }).pjax('a', '#content', {
